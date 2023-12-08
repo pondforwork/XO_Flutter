@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xo_flutter/screen/play.dart';
 
 class selectplayer extends StatefulWidget {
   const selectplayer({super.key});
@@ -26,15 +27,14 @@ class _selectplayerState extends State<selectplayer> {
               ),
             )
           ],
-        ),
-        SizedBox(
+        ),const SizedBox(
           height: 150,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               child: Card(
                   color: Colors.blue, // Set the background color here
                   clipBehavior: Clip.hardEdge,
@@ -42,6 +42,7 @@ class _selectplayerState extends State<selectplayer> {
                     splashColor: Colors.green,
                     onTap: () {
                       print("Test");
+                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) { return const PlayGame(); }));
                     },
                     child: const SizedBox(
                       width: 150,
@@ -64,7 +65,6 @@ class _selectplayerState extends State<selectplayer> {
             ),
             Card(
                 color: Colors.red, // Set the background color here
-
                 clipBehavior: Clip.hardEdge,
                 child: InkWell(
                   splashColor: Colors.green,
