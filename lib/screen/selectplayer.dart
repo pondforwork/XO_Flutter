@@ -42,7 +42,7 @@ class _selectplayerState extends State<selectplayer> {
                     splashColor: Colors.green,
                     onTap: () {
                       print("Test");
-                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) { return const PlayGame(); }));
+                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) { return const PlayGame(initialXTurn: true,); }));
                     },
                     child: const SizedBox(
                       width: 150,

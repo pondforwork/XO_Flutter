@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PlayGame extends StatefulWidget {
-  const PlayGame({Key? key}) : super(key: key);
+  final bool initialXTurn;
+  const PlayGame({Key? key, required this.initialXTurn}) : super(key: key);
 
   @override
   State<PlayGame> createState() => _PlayGameState();
